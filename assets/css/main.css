@@ -238,6 +238,20 @@ hr {
   padding-bottom: 25px;
 }
 
+.post-single {
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  background-color: #fff;
+  color: #444;
+  margin-bottom: 65px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
 .post img {
   width: 100%;
 }
