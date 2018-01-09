@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{#post}}
+  <div class="post">
+    <header class="post-header">
+      <time class="post-meta--date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+
+      <a class="post-heading--url" href="{{url}}">
+        <h1 class="article-heading">{{title}}</h1>
+      </a>
+
+      <div class="post-tags">
+        {{#foreach tags}}
+          <a href="{{url}}" title="{{name}}" class="{{slug}}">{{name}}</a>
+        {{/foreach}}
+      </div>
+    </header>
+
+    {{#if feature_image}}
+      <figure class="post-feature-image" style="background-image: url({{feature_image}})"></figure>
+    {{/if}}
+
+    <article class="post-content">
+      {{content}}
+    </article>
+  </div>
+{{/post}}

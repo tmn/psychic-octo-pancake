@@ -1,0 +1,21 @@
+{
+  "name": "psychic-octo-pancake",
+  "version": "1.0.0",
+  "description": "Ghost theme for tmn.io",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
+  "config": {
+    "posts_per_page": 10
+  },
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": {
+    "name": "Tri Nguyen",
+    "email": "mail@trimn.net",
+    "url": "https://tmn.io"
+  },
+  "license": "MIT"
+}

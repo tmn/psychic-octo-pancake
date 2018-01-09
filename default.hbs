@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{meta_title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}">
+
+    {{ghost_head}}
+  </head>
+  <body>
+    <header class="container site-header">
+      <a href="/">
+        <h1 class="site-heading--main">{{@blog.title}}</h1>
+      </a>
+
+      <h2 class="site-heading--sub">{{@blog.description}}</h2>
+    </header>
+
+    <div class="container site-container">
+      <main>
+        {{{ body }}}
+      </main>
+
+      <aside class="sidebar">
+        <h2 class="sidebar-heading">About Tri!</h2>
+
+        <p>I'm a code writer and a web enthusiast. Love photographing and cycling. </p>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="container site-footer">
+        &copy; 2018 Tri Nguyen
+      </div>
+      {{ghost_foot}}
+    </footer>
+  </body>
+</html>
