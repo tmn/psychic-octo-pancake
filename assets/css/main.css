@@ -116,6 +116,10 @@ ol {
   list-style-type: decimal;
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 li p {
   margin: 0;
 }
