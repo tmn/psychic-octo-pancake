@@ -1,27 +1,51 @@
 {{!< default}}
 
 {{#post}}
-  <div class="post">
-    <header class="post-header">
-      <time class="post-meta--date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+  <article>
+    <div class="post post-single">
+      <header class="post-header">
+        <time class="post-meta--date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
 
-      <a class="post-heading--url" href="{{url}}">
-        <h1 class="article-heading">{{title}}</h1>
-      </a>
+        <a class="post-heading--url" href="{{url}}">
+          <h1 class="article-heading">{{title}}</h1>
+        </a>
 
-      <div class="post-tags">
-        {{#foreach tags}}
-          <a href="{{url}}" title="{{name}}" class="{{slug}}">{{name}}</a>
-        {{/foreach}}
+        <div class="post-tags">
+          {{#foreach tags}}
+            <a href="{{url}}" title="{{name}}" class="{{slug}}">{{name}}</a>
+          {{/foreach}}
+        </div>
+      </header>
+
+      {{#if feature_image}}
+        <figure class="post-feature-image" style="background-image: url({{feature_image}})"></figure>
+      {{/if}}
+
+      <div class="post-content">
+        {{content}}
       </div>
-    </header>
+    </div>
 
-    {{#if feature_image}}
-      <figure class="post-feature-image" style="background-image: url({{feature_image}})"></figure>
-    {{/if}}
+    <div class="post-footer">
+      <div id="disqus_thread"></div>
+      <script>
 
-    <article class="post-content">
-      {{content}}
-    </article>
-  </div>
+       var disqus_config = function () {
+         this.page.url = 'tmn.io';
+         this.page.identifier = "ghost-{{comment_id}}";
+       };
+
+       (function() { // DON'T EDIT BELOW THIS LINE
+         var d = document, s = d.createElement('script');
+         s.src = 'https://supertri.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+       })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+  </article>
+
+
 {{/post}}
