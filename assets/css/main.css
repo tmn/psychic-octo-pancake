@@ -141,6 +141,22 @@ main {
   color: #fff;
 }
 
+.social-icon--strava:hover {
+  background-color: #fc4c02;
+}
+
+.social-icon--twitter:hover {
+  background-color: #006dbf;
+}
+
+.social-icon--github:hover {
+  background-color: #0366d6;
+}
+
+.social-icon--facebook:hover {
+  background-color: #4267B4;
+}
+
 sup {
   top: -5px;
   position: relative;
@@ -232,7 +248,7 @@ hr {
 }
 
 .btn:hover {
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
 
