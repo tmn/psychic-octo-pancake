@@ -60,6 +60,10 @@ body {
   min-width: 320px;
 }
 
+strong {
+  font-weight: bold;
+}
+
 #site-tag-list {
   list-style-type: none;
   padding-left: 0;
