@@ -60,6 +60,32 @@ body {
   min-width: 320px;
 }
 
+#site-tag-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#site-tag-list li {
+  display: inline-block;
+}
+
+
+#site-tag-list a {
+  background-color: #444;
+  color: #aaa;
+  font-size: 10px;
+  display: block;
+  padding: 3px 10px;
+  margin-right: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#site-tag-list a:hover {
+  background-color: #888;
+  color: #333;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -93,6 +119,9 @@ main {
 .sidebar {
   width: 27%;
   font-size: 14px;
+}
+.sidebar-section {
+  margin-bottom: 35px;
 }
 
 sup {
