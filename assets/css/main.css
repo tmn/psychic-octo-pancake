@@ -230,6 +230,13 @@ h1 {
   font-size: 32px;
 }
 
+h2 {
+  font-size: 22px;
+}
+
+h3, h4, h5, h6 {
+  font-size: 18px;
+}
 
 hr {
   position: relative;
@@ -274,6 +281,7 @@ hr {
 }
 
 .sidebar-heading {
+  font-size: 14px;
   font-weight: bold;
   color: #aaa;
 }
