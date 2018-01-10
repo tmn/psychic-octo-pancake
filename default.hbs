@@ -33,35 +33,15 @@
 
         <section class="sidebar-section">
           <h2 class="sidebar-heading">Tags</h2>
-          <ul id="site-tag-list">
-          </ul>
-          <script>
-           fetch(ghost.url.api('tags', {
-             limit: 'all',
-             include: 'count.posts',
-             order: 'count.posts DESC'
-           })).then(function (data) {
-             return data.json();
-           }).then(function (data) {
-             console.log(data)
-             const tagList = document.getElementById('site-tag-list');
+          <ul id="site-tag-list"></ul>
+        </section>
 
-             let tagFrag = document.createDocumentFragment();
-
-             data.tags.forEach(function (tag) {
-               let li = document.createElement('li');
-               let anchor = document.createElement('a');
-               anchor.setAttribute('href', '/tag/' + tag.slug);
-
-               anchor.appendChild(document.createTextNode(tag.name));
-
-               li.appendChild(anchor);
-               tagFrag.appendChild(li);
-             });
-
-             tagList.appendChild(tagFrag);
-           });
-          </script>
+        <section class="sidebar-section">
+          <h2 class="sidebar-heading">Me on the Internet</h2>
+          <a class="social-icon" href="https://instagram.com/trimn/"><i class="fab fa-instagram"></i></a>
+          <a class="social-icon" href="https://github.com/tmn/"><i class="fab fa-github"></i></a>
+          <a class="social-icon" href="https://twitter.com/itmn/"><i class="fab fa-twitter"></i></a>
+          <a class="social-icon" href="https://facebook.com/trimn/"><i class="fab fa-facebook"></i></a>
         </section>
       </aside>
     </div>
@@ -70,6 +50,35 @@
       <div class="container site-footer--content">
         &copy; 2018 Tri Nguyen
       </div>
+
+      <script>
+       fetch(ghost.url.api('tags', {
+         limit: 'all',
+         include: 'count.posts',
+         order: 'count.posts DESC'
+       })).then(function (data) {
+         return data.json();
+       }).then(function (data) {
+         console.log(data)
+         const tagList = document.getElementById('site-tag-list');
+
+         let tagFrag = document.createDocumentFragment();
+
+         data.tags.forEach(function (tag) {
+           let li = document.createElement('li');
+           let anchor = document.createElement('a');
+           anchor.setAttribute('href', '/tag/' + tag.slug);
+
+           anchor.appendChild(document.createTextNode(tag.name));
+
+           li.appendChild(anchor);
+           tagFrag.appendChild(li);
+         });
+
+         tagList.appendChild(tagFrag);
+       });
+      </script>
+
       {{ghost_foot}}
     </footer>
   </body>
