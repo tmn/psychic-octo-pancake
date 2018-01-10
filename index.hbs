@@ -1,35 +1,33 @@
 {{!< default}}
 
-<section>
-  {{#foreach posts}}
-    <article class="post">
-      <header class="post-header">
-        <time class="post-meta--date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+{{#foreach posts}}
+  <article class="post-preview">
+    <header class="post-header">
+      <time class="post-meta--date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
 
-        <a class="post-heading--url" href="{{url}}">
-          <h1 class="article-heading">{{title}}</h1>
-        </a>
+      <a class="post-heading--url" href="{{url}}">
+        <h1 class="article-heading">{{title}}</h1>
+      </a>
 
-        <div class="post-tags">
-          {{#foreach tags}}
-            <a href="{{url}}" title="{{name}}" class="{{slug}}">{{name}}</a>
-          {{/foreach}}
-        </div>
-      </header>
-
-      {{#if feature_image}}
-        <a href="{{url}}">
-          <div class="post-feature-image" style="background-image: url({{feature_image}})"></div>
-        </a>
-      {{/if}}
-
-      <div class="post-content">
-        {{excerpt words="50"}}
-
-        <div class="post-controllers">
-          <a class="btn" href="{{url}}">Read More</a>
-        </div>
+      <div class="post-tags">
+        {{#foreach tags}}
+          <a href="{{url}}" title="{{name}}" class="{{slug}}">{{name}}</a>
+        {{/foreach}}
       </div>
-    </article>
-  {{/foreach}}
-</section>
+    </header>
+
+    {{#if feature_image}}
+      <a href="{{url}}">
+        <div class="post-feature-image" style="background-image: url({{feature_image}})"></div>
+      </a>
+    {{/if}}
+
+    <div class="post-content">
+      {{excerpt words="50"}}
+
+      <div class="post-controllers">
+        <a class="btn" href="{{url}}">Read More</a>
+      </div>
+    </div>
+  </article>
+{{/foreach}}
