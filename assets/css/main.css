@@ -322,6 +322,27 @@ main {
   margin-left: 8px;
 }
 
+.post-social {
+  font-size: 12px;
+}
+
+.post-social--button {
+  color: #888;
+  background-color: #efefef;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.post-social--button:hover {
+  background-color: #ec2016;
+  color: #fff;
+}
+
 .post-author--content {
   padding-top: 15px;
   padding-bottom: 15px;
