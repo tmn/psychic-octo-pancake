@@ -356,6 +356,10 @@ main {
   color: #fff;
 }
 
+.post-tag-separator:last-child {
+  display: none;
+}
+
 .post-author--content {
   padding-top: 15px;
   padding-bottom: 15px;
