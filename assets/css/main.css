@@ -161,6 +161,10 @@ main {
   background-color: #0366d6;
 }
 
+.social-icon--flickr:hover {
+  background-color: #4c6ef5;
+}
+
 .social-icon--facebook:hover {
   background-color: #4267B4;
 }
